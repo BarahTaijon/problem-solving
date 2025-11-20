@@ -1,6 +1,9 @@
 package problems;
+
 import java.util.HashSet;
+
 public class Remove_Duplicates_from_Sorted_Array {
+	
 	
 	/* 
 	 * Given an integer array nums sorted in non-decreasing order
@@ -29,11 +32,14 @@ public class Remove_Duplicates_from_Sorted_Array {
 	 * Output: 5, nums = [0,1,2,3,4,_,_,_,_,_]
 	 * */
 	
+
+	
+	HashSet<Integer> s = new HashSet<>();
+	
     public int removeDuplicates(int[] nums) {
       
     	// To maintain the new size of the array
     	int size = 0; 
-    	HashSet<Integer> s = new HashSet<>();
     	
     	for (int i=0; i<nums.length; i++) {
     		if(!s.contains(nums[i]))
